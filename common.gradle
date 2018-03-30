@@ -1,0 +1,24 @@
+apply plugin: "java"
+apply plugin: 'idea'
+apply plugin: 'com.itsupportme.application'
+sourceCompatibility = '1.8'
+    
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+    
+repositories {
+    mavenCentral()
+    maven {
+        credentials {
+            username "readonly"
+            password "readonly"
+        }
+        url "http://svn.itsupportme.com:81/repository/proprietary/"
+    }
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}

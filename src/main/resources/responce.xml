@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackResponse>
+    <TrackInfo ID="9410810200830148860520">
+        <TrackSummary>
+            <EventTime>2:24 am</EventTime>
+            <EventDate>May 6, 2016</EventDate>
+            <Event>Departed USPS Destination Facility</Event>
+            <EventCity>KANSAS CITY</EventCity>
+            <EventState>KS</EventState>
+            <EventZIPCode>66106</EventZIPCode>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+        </TrackSummary>
+        <TrackDetail>
+            <EventTime>12:57 am</EventTime>
+            <EventDate>May 6, 2016</EventDate>
+            <Event>Arrived at USPS Destination Facility</Event>
+            <EventCity>KANSAS CITY</EventCity>
+            <EventState>KS</EventState>
+            <EventZIPCode>66106</EventZIPCode>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+        </TrackDetail>
+        <TrackDetail>
+            <EventTime>9:16 pm</EventTime>
+            <EventDate>May 4, 2016</EventDate>
+            <Event>Arrived at USPS Origin Facility</Event>
+            <EventCity>TAMPA</EventCity>
+            <EventState>FL</EventState>
+            <EventZIPCode>33605</EventZIPCode>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+        </TrackDetail>
+        <TrackDetail>
+            <EventTime>8:01 pm</EventTime>
+            <EventDate>May 4, 2016</EventDate>
+            <Event>Accepted at USPS Origin Facility</Event>
+            <EventCity>SAINT PETERSBURG</EventCity>
+            <EventState>FL</EventState>
+            <EventZIPCode>33716</EventZIPCode>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+        </TrackDetail>
+        <TrackDetail>
+            <EventTime/>
+            <EventDate>May 4, 2016</EventDate>
+            <Event>Pre-Shipment Info Sent to USPS</Event>
+            <EventCity/>
+            <EventState/>
+            <EventZIPCode/>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+        </TrackDetail>
+        <TrackDetail>
+            <EventTime>1:06 pm</EventTime>
+            <EventDate>May 4, 2016</EventDate>
+            <Event>Shipping Label Created</Event>
+            <EventCity>SAINT PETERSBURG</EventCity>
+            <EventState>FL</EventState>
+            <EventZIPCode>33716</EventZIPCode>
+            <EventCountry/>
+            <FirmName/>
+            <Name/>
+            <AuthorizedAgent>false</AuthorizedAgent>
+            <DeliveryAttributeCode>33</DeliveryAttributeCode>
+        </TrackDetail>
+    </TrackInfo>
+</TrackResponse>

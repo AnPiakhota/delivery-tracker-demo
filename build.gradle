@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        maven {
+            credentials {
+                username "readonly"
+                password "readonly"
+            }
+            url "http://svn.itsupportme.com:81/repository/proprietary/"
+        }
+    }
+    dependencies {
+        classpath 'com.ghcm:plugin-itsm-application:1.+'
+    }
+}
+
+apply from: 'common.gradle'
+
+if (!hasProperty('mainClass')) { //this is to allow overriding main class from cmd using -PmainClass=[classname]
+    ext.mainClass = "com.itsupportme.services.tracker.launch.Main"
+}
+
+dependencies {
+    compile "com.ghcm:library-itsupportme:1.1.+"
+    compile "net.pingtool:pingtool-common:1.1.+"
+    compile "com.ghcm:ghcm-common:1.2.+"
+    runtime "com.pervasive:jdbc:2.5"
+    runtime "mysql:mysql-connector-java:5.1.33"
+}
+
+task runOverride(group: "DeliveryTracker") << {
+    run {
+        args '-runOverride'
+    }
+    tasks.run.execute()
+}
+

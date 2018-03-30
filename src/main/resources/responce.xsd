@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TrackResponse" type="TrackResponseType"/>
+  <xs:complexType name="TrackSummaryType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="EventTime"/>
+      <xs:element type="xs:string" name="EventDate"/>
+      <xs:element type="xs:string" name="Event"/>
+      <xs:element type="xs:string" name="EventCity"/>
+      <xs:element type="xs:string" name="EventState"/>
+      <xs:element type="xs:string" name="EventZIPCode"/>
+      <xs:element type="xs:string" name="EventCountry"/>
+      <xs:element type="xs:string" name="FirmName"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="AuthorizedAgent"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TrackResponseType">
+    <xs:sequence>
+      <xs:element type="TrackInfoType" name="TrackInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TrackDetailType">
+    <xs:sequence>
+      <xs:element name="EventTime">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="12:57 am"/>
+            <xs:enumeration value="9:16 pm"/>
+            <xs:enumeration value="8:01 pm"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="1:06 pm"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EventDate">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="May 6, 2016"/>
+            <xs:enumeration value="May 4, 2016"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Event">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Arrived at USPS Destination Facility"/>
+            <xs:enumeration value="Arrived at USPS Origin Facility"/>
+            <xs:enumeration value="Accepted at USPS Origin Facility"/>
+            <xs:enumeration value="Pre-Shipment Info Sent to USPS"/>
+            <xs:enumeration value="Shipping Label Created"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EventCity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="KANSAS CITY"/>
+            <xs:enumeration value="TAMPA"/>
+            <xs:enumeration value="SAINT PETERSBURG"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EventState">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="KS"/>
+            <xs:enumeration value="FL"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="EventZIPCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="66106"/>
+            <xs:enumeration value="33605"/>
+            <xs:enumeration value="33716"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="EventCountry"/>
+      <xs:element type="xs:string" name="FirmName"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="AuthorizedAgent"/>
+      <xs:element type="xs:string" name="DeliveryAttributeCode" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TrackInfoType">
+    <xs:sequence>
+      <xs:element type="TrackSummaryType" name="TrackSummary"/>
+      <xs:element type="TrackDetailType" name="TrackDetail" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="ID"/>
+  </xs:complexType>
+</xs:schema>
